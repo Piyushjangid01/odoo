@@ -1,16 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Web App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Piyush</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .red-text {
+            color: red;
+        }
+        .blue-text {
+            color: blue;
+        }
+        .green-text {
+            color: green;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>HELLO I AM PIYUSH HOW CAN I HELP YOU</h1>
-    <h1 style="colour: red;"></h1>Hii this is is working jenkins pipeline</h1>
-    <h1 style="colour: blue;"></h1>Hii tell me what can i do for you</h1>
-    <h1 style="color: green;">Hello Piyush! Jenkins is working </h1>
+
+    <h1>Hello, I am <strong>Piyush</strong>. How can I help you?</h1>
+    <h1 class="red-text">Hi, this is working with Jenkins Pipeline.</h1>
+    <h1 class="blue-text">Tell me what can I do for you.</h1>
+    <h1 class="green-text">Hello Piyush! Jenkins is working successfully.</h1>
 
     <button onclick="greet()">Click Me</button>
-    <script src="script.js"></script>
+
+    <script>
+        function greet() {
+            alert("Hello! This is Piyush's Web App running with Jenkins.");
+        }
+    </script>
+
 </body>
 </html>
