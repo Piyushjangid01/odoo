@@ -81,19 +81,29 @@
       text-align: center;
     }
 
-    .services {
+    .services,
+    .rooms,
+    .feedbacks {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       gap: 30px;
     }
 
-    .service-box {
+    .box {
       background: white;
       border-radius: 10px;
       padding: 20px;
       width: 300px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
     }
 
     .booking-form {
@@ -117,7 +127,8 @@
     }
 
     .booking-form input,
-    .booking-form select {
+    .booking-form select,
+    .booking-form textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -148,7 +159,9 @@
     }
 
     @media (max-width: 768px) {
-      .services {
+      .services,
+      .rooms,
+      .feedbacks {
         flex-direction: column;
         align-items: center;
       }
@@ -168,8 +181,9 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#booking">Book</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#feedback">Feedback</a></li>
       </ul>
     </nav>
     <div class="hero-content">
@@ -182,17 +196,38 @@
   <section id="services">
     <h2>Our Services</h2>
     <div class="services">
-      <div class="service-box">
-        <h3>Deluxe Rooms</h3>
-        <p>Spacious and luxurious rooms with city views, free Wi-Fi and 24/7 room service.</p>
+      <div class="box">
+        <h3>Free Wi-Fi</h3>
+        <p>High-speed internet throughout the hotel premises.</p>
       </div>
-      <div class="service-box">
-        <h3>Fine Dining</h3>
-        <p>Enjoy gourmet meals prepared by top chefs in our elegant dining hall.</p>
+      <div class="box">
+        <h3>24/7 Room Service</h3>
+        <p>We’re always here for you with food and hospitality.</p>
       </div>
-      <div class="service-box">
-        <h3>Spa & Wellness</h3>
-        <p>Relax and rejuvenate with our premium spa and massage treatments.</p>
+      <div class="box">
+        <h3>Luxury Spa</h3>
+        <p>Relax with our premium spa, sauna, and massage services.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rooms">
+    <h2>Our Rooms</h2>
+    <div class="rooms">
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1600607689158-3b504bc93454" alt="Deluxe Room">
+        <h3>Deluxe Room</h3>
+        <p>Elegant room with king-size bed, city view, and minibar.</p>
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1582719478181-c4e6c1ba68ca" alt="Suite Room">
+        <h3>Executive Suite</h3>
+        <p>Spacious suite with living room, private balcony, and luxury bath.</p>
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32" alt="Standard Room">
+        <h3>Standard Room</h3>
+        <p>Affordable comfort with queen bed, work desk, and smart TV.</p>
       </div>
     </div>
   </section>
@@ -211,8 +246,8 @@
         <select id="room" required>
           <option value="">Select Room</option>
           <option value="Deluxe">Deluxe Room</option>
-          <option value="Suite">Suite</option>
-          <option value="Standard">Standard</option>
+          <option value="Suite">Executive Suite</option>
+          <option value="Standard">Standard Room</option>
         </select>
 
         <label for="checkin">Check-In Date</label>
@@ -226,14 +261,32 @@
     </div>
   </section>
 
-  <footer id="contact">
+  <section id="feedback">
+    <h2>Guest Feedback</h2>
+    <div class="feedbacks">
+      <div class="box">
+        <p>“Amazing hospitality and beautiful rooms. Would stay again!”</p>
+        <strong>- Priya Sharma</strong>
+      </div>
+      <div class="box">
+        <p>“Best hotel experience in the city. Great food and clean rooms.”</p>
+        <strong>- Aman Verma</strong>
+      </div>
+      <div class="box">
+        <p>“The staff was so friendly, and the spa was incredibly relaxing!”</p>
+        <strong>- Neha Gupta</strong>
+      </div>
+    </div>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Royal Stay Hotel. All rights reserved.</p>
   </footer>
 
   <script>
     function handleBooking(event) {
       event.preventDefault();
-      alert("Thank you! Your booking request has been received.");
+      alert("Thank you! Your booking has been submitted.");
       event.target.reset();
     }
   </script>
