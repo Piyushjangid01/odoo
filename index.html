@@ -127,8 +127,7 @@
     }
 
     .booking-form input,
-    .booking-form select,
-    .booking-form textarea {
+    .booking-form select {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -149,6 +148,15 @@
 
     .booking-form button:hover {
       background-color: #218838;
+    }
+
+    .map-container {
+      max-width: 100%;
+      height: 400px;
+      margin: 40px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     footer {
@@ -184,6 +192,7 @@
         <li><a href="#rooms">Rooms</a></li>
         <li><a href="#booking">Booking</a></li>
         <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#location">Location</a></li>
       </ul>
     </nav>
     <div class="hero-content">
@@ -215,14 +224,14 @@
     <h2>Our Rooms</h2>
     <div class="rooms">
       <div class="box">
-        <img src="https://images.unsplash.com/photo-1600607689158-3b504bc93454" alt="Deluxe Room">
+        <img src="https://images.unsplash.com/photo-1578894388665-bacc9b5b71c1" alt="Deluxe Room">
         <h3>Deluxe Room</h3>
         <p>Elegant room with king-size bed, city view, and minibar.</p>
       </div>
       <div class="box">
-        <img src="https://images.unsplash.com/photo-1582719478181-c4e6c1ba68ca" alt="Suite Room">
+        <img src="https://images.unsplash.com/photo-1582719478181-c4e6c1ba68ca" alt="Executive Suite">
         <h3>Executive Suite</h3>
-        <p>Spacious suite with living room, private balcony, and luxury bath.</p>
+        <p>Spacious suite with living area, balcony, and luxury bath.</p>
       </div>
       <div class="box">
         <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32" alt="Standard Room">
@@ -246,7 +255,7 @@
         <select id="room" required>
           <option value="">Select Room</option>
           <option value="Deluxe">Deluxe Room</option>
-          <option value="Suite">Executive Suite</option>
+          <option value="Executive">Executive Suite</option>
           <option value="Standard">Standard Room</option>
         </select>
 
@@ -276,6 +285,22 @@
         <p>“The staff was so friendly, and the spa was incredibly relaxing!”</p>
         <strong>- Neha Gupta</strong>
       </div>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>Find Us Here</h2>
+    <div class="map-container">
+      <!-- Replace the location below with your hotel's exact location if needed -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.968732146573!2d75.80650857442659!3d26.87653187664809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db4107391e8cb%3A0xf25de163d1d42939!2sHotel%20Royal%20Stay!5e0!3m2!1sen!2sin!4v1690526268884!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   </section>
 
