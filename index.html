@@ -13,7 +13,7 @@
     }
 
     header {
-      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c'); /* royalty-free hotel image */
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
       background-size: cover;
       background-position: center;
       color: white;
@@ -96,8 +96,48 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    .service-box h3 {
-      margin-bottom: 10px;
+    .booking-form {
+      background-color: #fff;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .booking-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .booking-form label {
+      display: block;
+      text-align: left;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .booking-form button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .booking-form button:hover {
+      background-color: #218838;
     }
 
     footer {
@@ -107,14 +147,15 @@
       text-align: center;
     }
 
-    footer p {
-      margin: 0;
-    }
-
     @media (max-width: 768px) {
       .services {
         flex-direction: column;
         align-items: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
@@ -126,19 +167,19 @@
       <h1>Royal Stay</h1>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Rooms</a></li>
-        <li><a href="#">Dining</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="hero-content">
       <h2>Welcome to Royal Stay</h2>
       <p>Luxury & Comfort at Your Fingertips</p>
-      <button onclick="alert('Booking feature coming soon!')">Book Now</button>
+      <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">Book Now</button>
     </div>
   </header>
 
-  <section>
+  <section id="services">
     <h2>Our Services</h2>
     <div class="services">
       <div class="service-box">
@@ -156,9 +197,46 @@
     </div>
   </section>
 
-  <footer>
+  <section id="booking">
+    <div class="booking-form">
+      <h2>Book Your Stay</h2>
+      <form onsubmit="handleBooking(event)">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="room">Room Type</label>
+        <select id="room" required>
+          <option value="">Select Room</option>
+          <option value="Deluxe">Deluxe Room</option>
+          <option value="Suite">Suite</option>
+          <option value="Standard">Standard</option>
+        </select>
+
+        <label for="checkin">Check-In Date</label>
+        <input type="date" id="checkin" required>
+
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" id="checkout" required>
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <footer id="contact">
     <p>&copy; 2025 Royal Stay Hotel. All rights reserved.</p>
   </footer>
+
+  <script>
+    function handleBooking(event) {
+      event.preventDefault();
+      alert("Thank you! Your booking request has been received.");
+      event.target.reset();
+    }
+  </script>
 
 </body>
 </html>
