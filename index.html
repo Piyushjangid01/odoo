@@ -1,59 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-app</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin-bottom: 10px;
-        }
-        .red-text {
-            color: pink;
-        }
-        .blue-text {
-            color: blue;
-        }
-        .green-text {
-            color: white;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: black;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Royal Stay Hotel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c'); /* royalty-free hotel image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 100vh;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .hero-content h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content button {
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffd700;
+      color: #333;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .service-box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .service-box h3 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Hello, I am <strong>Piyush</strong>. How can I help you?</h1>
-    <h1 class="red-text">Hi, this is working with Jenkins Pipeline.</h1>
-    <h1 class="blue-text">Tell me what can I do for you.</h1>
-    <h1 class="red-text">Hello Piyush! Jenkins is working successfully.</h1>
+  <header>
+    <nav>
+      <h1>Royal Stay</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Rooms</a></li>
+        <li><a href="#">Dining</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2>Welcome to Royal Stay</h2>
+      <p>Luxury & Comfort at Your Fingertips</p>
+      <button onclick="alert('Booking feature coming soon!')">Book Now</button>
+    </div>
+  </header>
 
-    <button onclick="greet()">Click Me</button>
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Deluxe Rooms</h3>
+        <p>Spacious and luxurious rooms with city views, free Wi-Fi and 24/7 room service.</p>
+      </div>
+      <div class="service-box">
+        <h3>Fine Dining</h3>
+        <p>Enjoy gourmet meals prepared by top chefs in our elegant dining hall.</p>
+      </div>
+      <div class="service-box">
+        <h3>Spa & Wellness</h3>
+        <p>Relax and rejuvenate with our premium spa and massage treatments.</p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        function greet() {
-            alert("Hello! This is Piyush's Web App running with Jenkins.");
-        }
-    </script>
+  <footer>
+    <p>&copy; 2025 Royal Stay Hotel. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
