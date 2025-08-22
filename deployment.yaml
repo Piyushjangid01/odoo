@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: odoo-deployment
+  namespace: piyush
+  labels:
+    app: app-dev
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: app-dev
+  template:
+    metadata:
+      labels:
+        app: app-dev
+    spec:
+      containers:
+      - name: my-app-container
+        image: piyushj01/oddo
+        ports:
+        - containerPort: 80 
