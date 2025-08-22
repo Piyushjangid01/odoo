@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: odoo-deployment
-        image: piyushj01/oddo
+        image: piyushj01/odoo
         ports:
         - containerPort: 80 
