@@ -16,7 +16,7 @@ spec:
         app: app-dev
     spec:
       containers:
-      - name: my-app-container
+      - name: odoo-deployment
         image: piyushj01/oddo
         ports:
         - containerPort: 80 
