@@ -20,3 +20,8 @@ spec:
         image: piyushj01/odoo
         ports:
         - containerPort: 80 
+      
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 8080
