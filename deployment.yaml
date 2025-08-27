@@ -6,7 +6,12 @@ metadata:
   labels:
     app: app-dev
 spec:
-  replicas: 3 
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1           # How many extra pods can be created above the desired number
+      maxUnavailable: 1    
   selector:
     matchLabels:
       app: app-dev
@@ -20,8 +25,3 @@ spec:
         image: piyushj01/odoo
         ports:
         - containerPort: 80 
-      
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 8080

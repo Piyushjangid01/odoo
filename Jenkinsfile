@@ -35,6 +35,7 @@ pipeline {
     steps {
         // Apply Kubernetes manifests from repo root
         sh 'microk8s kubectl apply -f deployment.yaml -f service.yaml -n $KUBERNETES_NAMESPACE'
+        sh 'microk8s kubectl rollout status deployment/odoo-deployment -n $KUBERNETES_NAMESPACE'
             }
         }
     } 
