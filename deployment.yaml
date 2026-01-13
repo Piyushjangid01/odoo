@@ -6,7 +6,7 @@ metadata:
   labels:
     app: app-dev
 spec:
-  replicas: 3
+  replicas: 0
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -22,6 +22,6 @@ spec:
     spec:
       containers:
       - name: odoo-deployment
-        image: piyushj01/odoooo
+        image: piyushj01/odoo
         ports:
         - containerPort: 80 
